@@ -89,11 +89,22 @@ The result is a system that feels less like AI output—and more like interactin
         ┌────────────────────────────────────────────┐
         │      Memory + State Update System          │
         └────────────────────────────────────────────┘
-
+        
 ---
 
-
 ## 🎭 Personas
+
+Each persona is an execution policy bound to a distinct LLM backend.
+
+                Router
+                  ↓
+   ┌──────────────┼──────────────┐
+   ↓              ↓              ↓
+ Hades         Athena          Ares
+Memory        Reasoning        Action
+   ↓              ↓              ↓
+LLM-A          LLM-B          LLM-C
+
 
 ### 🖤 Hades — The Observer
 “I remember what others discard.”
@@ -105,7 +116,6 @@ The result is a system that feels less like AI output—and more like interactin
 
 Hades acts as the memory core of the system.
 
----
 
 ### 🌿 Athena — The Interpreter
 “Understanding comes before response.”
@@ -117,7 +127,6 @@ Hades acts as the memory core of the system.
 
 Athena serves as the reasoning layer.
 
----
 
 ### ⚔️ Ares — The Instinct
 “Act first. Refine later.”
@@ -130,6 +139,55 @@ Athena serves as the reasoning layer.
 Ares represents the execution layer.
 
 ---
+
+## Memory Architecture
+
+3-Layer Memory System
+
+User Input
+    ↓
+Embedding Model
+    ↓
+FAISS Retrieval
+    ↓
+Context Injection
+
+### Components
+
+#### Logs (JSONL)
+
+- Full conversation history
+- Debuggable interaction trace
+
+#### State (JSON)
+
+- Persistent user behavioral profile
+- Influences routing and prompting
+
+#### Vector Memory (FAISS)
+
+- Semantic retrieval over long-term history
+- Context expansion beyond chat window
+
+---
+
+## ⚙️ Multi LLM Dispatcher
+
+          Dispatcher
+              ↓
+  ┌───────────┼───────────┐
+  ↓           ↓           ↓
+Gemini      Groq     Local Models
+  ↓           ↓           ↓
+  └────── Unified Response ──────┘
+
+### Features
+- Multi-provider abstraction
+- Fallback routing
+- Persona-specific model binding
+- Latency/cost flexibility
+
+  ---
 
 ## 🧠 Core Features
 
@@ -166,26 +224,6 @@ Includes fallback routing for reliability.
 
 ### Behavioral Prompt Engine
 Every response is shaped by persona rules, memory state, recent chat context, and routing decisions.
-
----
-
-## 🏗️ Architecture
-
-User (Discord)
-↓
-Bot Interface (main/bot.py)
-↓
-Router Engine (router/)
-↓
-Persona Selector (Hades / Athena / Ares)
-↓
-Prompt Builder
-↓
-LLM Layer (Gemini / Groq / Local fallback)
-↓
-Memory System (FAISS + JSON state)
-↓
-Response returned to user
 
 ---
 
