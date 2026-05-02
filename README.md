@@ -33,6 +33,55 @@ The result is a system that feels less like AI output—and more like interactin
 
 ---
 
+## ⚙️ System Architecture
+
+                         ┌────────────────────┐
+                         │      User Input    │
+                         └─────────┬──────────┘
+                                   ↓
+                    ┌────────────────────────────┐
+                    │   Intent Classification    │
+                    └─────────┬──────────────────┘
+                              ↓
+                    ┌────────────────────────────┐
+                    │     Routing Engine         │
+                    └─────────┬──────────────────┘
+                              ↓
+        ┌────────────────────────────────────────────┐
+        │          Persona Selection Layer           │
+        │           Hades | Athena | Ares            │
+        └───────────────┬────────────────────────────┘
+                        ↓
+        ┌────────────────────────────────────────────┐
+        │        Memory Orchestration Layer          │
+        │  - FAISS Vector Search                     │
+        │  - JSONL Conversation Logs                 │
+        │  - Persistent User State                   │
+        └───────────────┬────────────────────────────┘
+                        ↓
+        ┌────────────────────────────────────────────┐
+        │        Prompt Construction Engine          │
+        │  - Persona Templates                       │
+        │  - Memory Injection                        │
+        │  - State Conditioning                      │
+        └───────────────┬────────────────────────────┘
+                        ↓
+        ┌────────────────────────────────────────────┐
+        │          LLM Dispatch Layer                │
+        │  Gemini / Groq / HF / Local Models         │
+        └───────────────┬────────────────────────────┘
+                        ↓
+        ┌────────────────────────────────────────────┐
+        │         Response Assembly Layer            │
+        └───────────────┬────────────────────────────┘
+                        ↓
+        ┌────────────────────────────────────────────┐
+        │      Memory + State Update System          │
+        └────────────────────────────────────────────┘
+
+---
+
+
 ## 🎭 Personas
 
 ### 🖤 Hades — The Observer
