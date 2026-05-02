@@ -18,16 +18,27 @@ memory-driven responses, and dynamic routing logic.
 
 ## ⚡ Overview
 
-Mythos-AI is not a chatbot.
-
 It is a multi-agent cognitive system designed to simulate independent personalities that react differently to the same user based on context, memory, and internal state.
 
-Every message flows through a layered pipeline:
-- Persona selection
-- Memory retrieval
-- Prompt construction
-- Model routing
-- Response generation
+```text
+User Input
+    ↓
+Intent + Context Parser
+    ↓
+Routing Engine (Policy Layer)
+    ↓
+Persona Selection
+    ↓
+Memory Retrieval Layer (FAISS + Logs + State)
+    ↓
+Prompt Construction Engine
+    ↓
+LLM Dispatch Layer (Multi-Provider)
+    ↓
+Response Post-Processing
+    ↓
+Memory + State Persistence
+```
 
 The result is a system that feels less like AI output—and more like interacting with distinct minds.
 
