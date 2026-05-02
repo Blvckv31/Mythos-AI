@@ -279,14 +279,6 @@ It simulates intelligence as a system of interacting identities rather than a si
 
 ---
 
-## 🖤 Creator
-
-Blvck
-
-Mythos-AI explores what happens when AI stops being a chatbot—and starts becoming a system of minds.
-
----
-
 ## 📜 License
 
 MIT License
