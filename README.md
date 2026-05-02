@@ -96,14 +96,16 @@ The result is a system that feels less like AI output—and more like interactin
 
 Each persona is an execution policy bound to a distinct LLM backend.
 
-                Router
-                  ↓
-   ┌──────────────┼──────────────┐
-   ↓              ↓              ↓
- Hades         Athena          Ares
-Memory        Reasoning        Action
-   ↓              ↓              ↓
-LLM-A          LLM-B          LLM-C
+ Router
+│
+├── Hades
+│     └── Memory → LLM-A
+│
+├── Athena
+│     └── Reasoning → LLM-B
+│
+└── Ares
+      └── Action → LLM-C
 
 
 ### 🖤 Hades — The Observer
@@ -173,14 +175,15 @@ Context Injection
 
 ## ⚙️ Multi LLM Dispatcher
 
-          Dispatcher
-              ↓
-  ┌───────────┼───────────┐
-  ↓           ↓           ↓
-Gemini      Groq     Local Models
-  ↓           ↓           ↓
-  └────── Unified Response ──────┘
+Dispatcher
+│
+├── Gemini → Response
+├── Groq → Response
+└── Local Models → Response
 
+        ↓
+   Unified Response Layer
+   
 ### Features
 - Multi-provider abstraction
 - Fallback routing
