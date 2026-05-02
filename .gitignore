@@ -1,0 +1,11 @@
+**/__pycache__/
+.env
+data/
+memory/
+discordbotblack.egg-info/
+behavior.pkl
+style.pkl
+index_behavior.faiss
+index_style.faiss
+pyproject.toml
+
