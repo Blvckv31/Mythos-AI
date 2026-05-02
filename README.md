@@ -8,6 +8,14 @@ It blends LLM orchestration, long-term memory, and behavioral routing to create 
 
 ---
 
+## 🎬 Live Demo — Mythos-AI
+
+A real-time demonstration of Mythos-AI showcasing:
+multi-persona switching (Hades, Athena, Ares),
+memory-driven responses, and dynamic routing logic.
+
+[![Watch Demo](https://img.youtube.com/vi/rr7qmFmsxBU/0.jpg)](https://www.youtube.com/watch?v=rr7qmFmsxBU)
+
 ## ⚡ Overview
 
 Mythos-AI is not a chatbot.
