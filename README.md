@@ -8,7 +8,7 @@ It blends LLM orchestration, long-term memory, and behavioral routing to create 
 
 ---
 
-## 🎬 Live Demo — Mythos-AI
+## 🎬 Live Demo
 
 A real-time demonstration of Mythos-AI showcasing:
 multi-persona switching (Hades, Athena, Ares),
@@ -40,7 +40,7 @@ Response Post-Processing
 Memory + State Persistence
 ```
 
-The result is a system that feels less like AI output—and more like interacting with distinct minds.
+The result is a system that feels less like AI output and more like interacting with distinct minds.
 
 ---
 
