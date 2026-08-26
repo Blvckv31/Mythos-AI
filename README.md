@@ -2,7 +2,7 @@
 
 > A multi-persona, memory-driven AI system that simulates evolving intelligence through distinct behavioral agents.
 
-Built by **Blvck**, Mythos-AI is an experimental conversational framework where intelligence is not singular—but distributed across multiple persistent personas, each with its own identity, tone, and decision patterns.
+Mythos-AI is an experimental conversational framework where intelligence is not singular but distributed across multiple persistent personas, each with its own identity, tone, and decision patterns.
 
 It blends LLM orchestration, long-term memory, and behavioral routing to create the illusion of a system that doesn’t just respond… but persists.
 
@@ -107,7 +107,7 @@ Router
 ```
 
 
-### 🖤 Hades — The Observer
+### 🖤 Hades: The Observer
 “I remember what others discard.”
 
 - Calm, stoic, and detached  
@@ -118,7 +118,7 @@ Router
 Hades acts as the memory core of the system.
 
 
-### 🌿 Athena — The Interpreter
+### 🌿 Athena: The Interpreter
 “Understanding comes before response.”
 
 - Warm, thoughtful, and analytical  
@@ -129,7 +129,7 @@ Hades acts as the memory core of the system.
 Athena serves as the reasoning layer.
 
 
-### ⚔️ Ares — The Instinct
+### ⚔️ Ares: The Instinct
 “Act first. Refine later.”
 
 - Fast, energetic, direct  
