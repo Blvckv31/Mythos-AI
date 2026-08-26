@@ -269,16 +269,6 @@ It simulates intelligence as a system of interacting identities rather than a si
 
 ---
 
-## 🚀 Future Improvements
-
-- Emotional state modeling per persona  
-- Self-evolving personality traits  
-- Web memory visualization dashboard  
-- Plugin-based persona system  
-- Reinforcement-based behavior tuning  
-
----
-
 ## 📜 License
 
 MIT License
